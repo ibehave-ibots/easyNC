@@ -14,7 +14,12 @@ classdef NetCDF
         end
 
         function dset = read2struct(obj, varargin)
-            dset = load2struct(obj.filename, varargin);
+            if isempty(varargin)
+                varnames = {};
+            else
+                varnames = varargin{1};
+            end
+            dset = load2struct(obj.filename, varnames);
         end
 
         function df = read2table(obj, varnames)
