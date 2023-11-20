@@ -1,0 +1,32 @@
+{
+"grpstats":
+    {
+        "inputs":
+        [
+            {"mutuallyExclusiveGroup":
+             [
+                 [
+                     {"name":"tbl", "kind":"required", "type":[["table"], ["dataset"], ["timetable"]]},
+                     {"name":"groupvar", "kind":"required", "type":[["choices=tbl.Properties.VariableNames"], ["choices=tbl.Properties.VarNames"], ["cellstr"], ["vector", "integer", ">0"], ["logical", "vector"], ["char"]]},
+                     {"name":"whichstats", "kind":"required", "type":[["choices={'mean', 'sem', 'numel', 'gname', 'std', 'var', 'min', 'max', 'range', 'meanci', 'predci'}"], ["function_handle"], ["char"]]},
+                     {"name":"Alpha", "kind":"namevalue", "type":["double", "scalar", ">=0", "<=1"]},
+                     {"name":"DataVars", "kind":"namevalue", "type":[["choices=tbl.Properties.VariableNames"], ["choices=tbl.Properties.VarNames"], ["logical", "vector"], ["double", "vector", ">0"], ["cellstr"], ["char"]]},
+                     {"name":"VarNames", "kind":"namevalue", "type":"cellstr"}
+                 ],
+                 [
+                     {"name":"X", "kind":"required", "type":[["datetime"], ["duration"], ["calendarDuration"], ["categorical"], ["cell"], ["cellstr"], ["char"]]},
+                     {"name":"groupvar", "kind":"required", "type":[["categorical"], ["logical", "vector"], ["numeric", "vector"], ["datetime", "vector"], ["duration", "vector"], ["cellstr"], ["char"]]},
+                     {"name":"whichstats", "kind":"required", "type":[["choices={'numel', 'gname'}"], ["function_handle"], ["char"]]}
+                 ],
+                 [
+                     {"name":"X", "kind":"required", "type":[["numeric"], ["logical"]]},
+                     {"name":"groupvar", "kind":"required", "type":[["categorical"], ["logical", "vector"], ["numeric", "vector"], ["datetime", "vector"], ["duration", "vector"], ["cellstr"], ["char"]]},
+                     {"name":"whichstats", "kind":"required", "type":[["choices={'mean', 'sem', 'numel', 'gname', 'std', 'var', 'min', 'max', 'range', 'meanci', 'predci'}"], ["function_handle"], ["char"]]},
+                     {"name":"Alpha", "kind":"namevalue", "type":["double", "scalar", ">=0", "<=1"]}
+                 ]
+             ]
+            }
+        ]
+    }
+"
+}
