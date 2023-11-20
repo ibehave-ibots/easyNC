@@ -1,12 +1,12 @@
 {
-"netcdf.NetCDF.NetCDF":
+"netcdf.Reader.Reader":
     {
         "inputs":
         [
             {"name": "filename", "kind": "required", "type": "file=*.nc", "purpose": "The NetCDF Filename to load."}
         ]
     },
-"netcdf.NetCDF.read2struct":
+"netcdf.Reader.read2struct":
     {
         "inputs":
         [
@@ -14,12 +14,22 @@
             {"name": "varnames", "kind": "required", "type": [["choices=obj.variables"]]}
         ]
     },
-"netcdf.NetCDF.read2table":
+"netcdf.Reader.read2table":
     {
         "inputs":
         [
             {"name": "obj", "kind": "required"},
             {"name": "varnames", "kind": "required", "type": [["choices=obj.variables"]]}
+        ]
+    },
+"netcdf.Writer.write_from_struct":
+    {
+        "inputs":
+        [
+            {"name": "obj", "kind": "required"},
+            {"name": "dset", "kind": "required", "type": ["struct"]},
+            {"name": "varName", "kind": "required", "type": ["choices=fieldnames(dset)"]},
+            {"name": "dimensions", "kind": "required", "type": ["choices=fieldnames(dset)"]}
         ]
     }
 }
