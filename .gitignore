@@ -1,3 +1,6 @@
+# Data Files
+*.nc
+
 # Autosave files
 *.asv
 *.m~
