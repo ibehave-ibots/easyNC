@@ -1,5 +1,7 @@
 # Data Files
 *.nc
+*.mat
+*.h5
 
 # Autosave files
 *.asv
