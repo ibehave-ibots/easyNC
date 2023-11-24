@@ -2,11 +2,11 @@ Understood. I'll revise the README file to emphasize these specific features—a
 
 ---
 
-# NetCDF MATLAB Class
+# easyNC.Reader MATLAB Class
 
 ## Overview
 
-The NetCDF MATLAB Class is an efficient tool designed to emulate the functionality of xarray's `load_dataset().to_dataframe()` feature in Python, tailored for MATLAB users. It is particularly useful for handling NetCDF files, a prevalent format for storing multi-dimensional scientific data. This class excels in automatically loading associated dimensions and seamlessly reshaping data into long table formats, making it invaluable for environmental, climate, and oceanographic data analysis.
+The easyNC.Reader MATLAB Class is an efficient tool designed to emulate the functionality of xarray's `load_dataset().to_dataframe()` feature in Python, tailored for MATLAB users. It is particularly useful for handling NetCDF files, a prevalent format for storing multi-dimensional scientific data. This class excels in automatically loading associated dimensions and seamlessly reshaping data into long table formats, making it invaluable for environmental, climate, and oceanographic data analysis.
 
 ## Key Features
 
@@ -22,7 +22,7 @@ The NetCDF MATLAB Class is an efficient tool designed to emulate the functionali
 Create an object to interact with a specific NetCDF file:
 
 ```matlab
-ncObj = netcdf.NetCDF('path_to_your_file.nc');
+ncObj = easyNC.Reader('path_to_your_file.nc');
 ```
 
 ### Reading Data with Dimensions
